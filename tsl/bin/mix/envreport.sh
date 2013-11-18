@@ -47,7 +47,7 @@ then
 	    DISTROV=`cat /etc/redhat-release`
 	    ;;
 	ubuntu)
-	    DISTROV=`cat /etc/lsb-release | egrep DESCRIP | sed 's/DISTRIB_DESCRIPTION="\(Ubuntu 12.04.3 LTS\)".*$/\1/'`
+	    DISTROV=`cat /etc/lsb-release | egrep DESCRIP | sed 's/DISTRIB_DESCRIPTION="\(.*\)".*$/\1/'`
 	    ;;
 	*)
 	    DISTROV='unknown'
