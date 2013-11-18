@@ -17,6 +17,15 @@ if [ -n "$BASH_VERSION" ]; then
 fi
 
 # set PATH so it includes user's private bin if it exists
-if [ -d "$HOME/bin" ] ; then
-    PATH="$HOME/bin:$PATH"
-fi
+for p in "$HOME/bin/mix" ; do
+    if [ -d $p ] ; then
+	PATH="$p:$PATH"
+    fi
+done
+
+# set PATH so it includes custom other stuff
+for p in /opt/chef/bin /opt/chef/embedded/bin ; do
+    if [ -d $p ] ; then
+	PATH="$p:$PATH"
+    fi
+done
