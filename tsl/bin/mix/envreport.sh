@@ -64,4 +64,4 @@ fi
 
 echo "$USERNAME on $FQDN ($DISTROV)"
 
-# Installed primitives-- perl, python, ruby, git, emacs
+# Installed primitives-- perl, python, ruby, git, emacs, pip, chef?,
