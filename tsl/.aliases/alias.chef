@@ -1,0 +1,2 @@
+alias repo="cd $HOME/chef-repo"
+alias repush="push $HOME/chef-repo"
