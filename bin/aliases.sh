@@ -5,5 +5,5 @@
 
 for i in `find ~/dotfiles/tsl/.aliases -name '*[^~]' -type f -print` ; do
     # echo 'to open:' $i
-    source $i
+    . $i
 done
