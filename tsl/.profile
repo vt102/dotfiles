@@ -30,6 +30,12 @@ for p in /opt/chefdk/bin /opt/chefdk/embedded/bin ; do
     fi
 done
 
+if [ -d /opt/chefdk ] ; then
+  export GEM_ROOT="/opt/chefdk/embedded/lib/ruby/gems/2.1.0"
+  export GEM_HOME=/home/acowell/.chefdk/gem/ruby/2.1.0
+  export GEM_PATH=/home/acowell/.chefdk/gem/ruby/2.1.0:/opt/chefdk/embedded/lib/ruby/gems/2.1.0
+fi
+
 for p in /opt/chef/bin /opt/chef/embedded/bin ; do
     if [ -d $p ] ; then
 	PATH="$p:$PATH"
