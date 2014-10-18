@@ -24,6 +24,12 @@ for p in "$HOME/bin/mix" ; do
 done
 
 # set PATH so it includes custom other stuff
+for p in /opt/chefdk/bin /opt/chefdk/embedded/bin ; do
+    if [ -d $p ] ; then
+	PATH="$p:$PATH"
+    fi
+done
+
 for p in /opt/chef/bin /opt/chef/embedded/bin ; do
     if [ -d $p ] ; then
 	PATH="$p:$PATH"
